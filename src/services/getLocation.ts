@@ -1,8 +1,7 @@
-import config from "../config";
-import fetch from "node-fetch";
+import config from "../config"
+import get from "./getMethod"
 
 export default async () => {
-  const response = await fetch(config.ip_api)
-  const location = await response.json()
+  const location = await get(config.ip_api)
   return location
 }
