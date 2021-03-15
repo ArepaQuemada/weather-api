@@ -11,7 +11,7 @@ export default (app: Express) => {
   app.use(cors())
   app.use(express.json())
   app.get("/", (req, res) => {
-    res.status(200)
+    res.status(200).send({})
   })
   app.use("/v1/location", location)
   app.use("/v1/current", current)
