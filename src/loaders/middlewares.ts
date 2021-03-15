@@ -13,7 +13,7 @@ export default (app: Express) => {
   app.get("/", (req, res) => {
     res.status(200)
   })
-  app.use("/location", location)
-  app.use("/current", current)
-  app.use("/forecast", forecast)
+  app.use("/v1/location", location)
+  app.use("/v1/current", current)
+  app.use("/v1/forecast", forecast)
 }
