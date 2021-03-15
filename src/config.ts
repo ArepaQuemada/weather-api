@@ -1,6 +1,9 @@
 import dontenv from "dotenv"
 dontenv.config()
 
+/**
+ * config object to access enviorment variables
+ */
 export default {
   port: process.env.PORT,
   api_key: process.env.API_KEY,
