@@ -1,14 +1,11 @@
-import express from "express";
-import config from "../config";
-import fetch from "node-fetch";
-
+import express from "express"
+import getLocation from "../services/getLocation"
 const route = express.Router()
 
 route.get("/", async (req, res) => {
   try {
-    const response = await fetch(config.ip_api)
-    const city = await response.json()
-    res.status(200).send(city)
+    const location = await getLocation()
+    res.send(location)
   } catch(err) {
     res.send(err)
   }
