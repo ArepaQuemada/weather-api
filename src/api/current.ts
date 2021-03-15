@@ -4,6 +4,9 @@ import getWeatherCity from "../services/getWeatherCity"
 
 const route = express.Router()
 
+/**
+ * route that returns current weather by city
+ */
 route.get("/:city?", async(req, res) => {
   try {
     const city = await getCity(req.params.city)

@@ -2,13 +2,10 @@ import express from "express";
 import startPort from "./loaders/port";
 import middlewares from "./loaders/middlewares";
 
-const app = express()
-const dontenv = require("dotenv")
-
 /**
- * Initializes dotenv
+ * initializes app
  */
-dontenv.config()
+const app = express()
 
 /**
  * middlewares and port

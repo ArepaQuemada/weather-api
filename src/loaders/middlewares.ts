@@ -4,6 +4,9 @@ import location from "../api/location"
 import current from "../api/current"
 import forecast from "../api/forecast"
 
+/**
+ * middlewares
+ */
 export default (app: Express) => {
   app.use(cors())
   app.use(express.json())
